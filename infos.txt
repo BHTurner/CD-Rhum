@@ -3,4 +3,9 @@
 1.2) placer dans un tableau
 
 2) algo qui incrémente l ASCII pour donner une nouvelle lettre a chaque fois
-3) si %75 >=1 ->
+3) si %70 >=1 -> M
+si % >=1 -> T
+si %2^3 >=1 -> frontière est
+si %2^2 >=1 -> frontière sud
+si %2^1 >=1 -> frontière ouest
+si %2^0 >=1 -> frontière nord
