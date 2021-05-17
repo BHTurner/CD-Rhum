@@ -1,0 +1,6 @@
+1) lire le .txt
+1.1) decoupe par :
+1.2) placer dans un tableau
+
+2) algo qui incrémente l ASCII pour donner une nouvelle lettre a chaque fois
+3) si %75 >=1 ->
