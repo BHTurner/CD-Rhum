@@ -6,7 +6,8 @@ namespace Classes
 {
     class Parcelle
     {
-        protected int taille;
-        protected int nom;
+        private int Taille;
+        private string Nom;
+        List<Unité> Unité_Liste;
     }
 }

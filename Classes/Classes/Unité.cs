@@ -7,6 +7,5 @@ namespace Classes
     class Unité
     {
         private char nom;
-        private int taille;
     }
 }
