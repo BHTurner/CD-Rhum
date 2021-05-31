@@ -6,8 +6,17 @@ namespace Classes
 {
     class Ile
     {
+        #region Attributs
         private string nom;
-        private double taille;
         List<Parcelle> Parcelle_Liste;
+        #endregion 
+
+        #region Constructeur
+        public Ile(string n)
+        {
+            nom = n;
+            string adr = String.Format(@"..\..\..\..\{0}.clair.txt", nom);
+        }
+        #endregion 
     }
 }
