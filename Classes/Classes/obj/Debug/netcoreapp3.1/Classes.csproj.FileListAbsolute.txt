@@ -11,3 +11,16 @@ C:\Users\omega\Desktop\Cours\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.csp
 C:\Users\omega\Desktop\Cours\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.dll
 C:\Users\omega\Desktop\Cours\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.pdb
 C:\Users\omega\Desktop\Cours\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.genruntimeconfig.cache
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.exe
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.deps.json
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.runtimeconfig.json
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.runtimeconfig.dev.json
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.dll
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.pdb
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.csprojAssemblyReference.cache
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.AssemblyInfoInputs.cache
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.AssemblyInfo.cs
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.csproj.CoreCompileInputs.cache
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.dll
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.pdb
+C:\Users\Toine\Documents\GitHub\CD-Rhum\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.genruntimeconfig.cache
