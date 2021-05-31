@@ -15,7 +15,8 @@ namespace Classes
         public Ile(string n)
         {
             nom = n;
-            string adr = String.Format(@"..\..\..\..\{0}.clair.txt", nom);
+            string adr_clair = String.Format(@"..\..\..\..\{0}.clair.txt", nom);
+            string adr_chiffre = String.Format(@"..\..\..\..\{0}.chiffre.txt", nom);
         }
         #endregion 
     }
