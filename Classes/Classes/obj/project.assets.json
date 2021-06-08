@@ -8,19 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Toine\\.nuget\\packages\\": {}
+    "C:\\Users\\omega\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Toine\\Documents\\GitHub\\CD-Rhum\\Classes\\Classes\\Classes.csproj",
+      "projectUniqueName": "C:\\Users\\omega\\Desktop\\Cours\\Classes\\Classes\\Classes.csproj",
       "projectName": "Classes",
-      "projectPath": "C:\\Users\\Toine\\Documents\\GitHub\\CD-Rhum\\Classes\\Classes\\Classes.csproj",
-      "packagesPath": "C:\\Users\\Toine\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Toine\\Documents\\GitHub\\CD-Rhum\\Classes\\Classes\\obj\\",
+      "projectPath": "C:\\Users\\omega\\Desktop\\Cours\\Classes\\Classes\\Classes.csproj",
+      "packagesPath": "C:\\Users\\omega\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\omega\\Desktop\\Cours\\Classes\\Classes\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Toine\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\omega\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

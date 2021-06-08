@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+using System.Linq;
 
 namespace Classes
 {
@@ -6,9 +10,10 @@ namespace Classes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Ile Scabb = new Ile("Scabb");
-            Scabb.Chiffre();
+            Parcelle P = new Parcelle('a');
+
+            P.calculTaille(P);
+            P.Emplacement(P);
         }
     }
 }
