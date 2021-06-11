@@ -3,32 +3,35 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace testclasse
+namespace Rhum
 {
     class Ile
     {
         private string nom;
         private string adr_clair;
         private string adr_chiffre;
+        private static int nbParcelle = 0;
         char[,] carte = new char[10, 10];
-        List<Parcelle> Parcelle_List;
+        List<Parcelle> Parcelle_List = new List<Parcelle>();
         List<char> doublons = new List<char>();
 
         public Ile(string n)
         {
             nom = n;
-            adr_clair = String.Format(@"..\..\..\..\{0}.clair.txt", nom);
-            adr_chiffre = String.Format(@"..\..\..\..\{0}.chiffre.txt", nom);
+            adr_clair = String.Format(@"..\..\..\Cartes\{0}.clair", nom);
+            adr_chiffre = String.Format(@"..\..\..\Cartes\{0}.chiffre", nom);
             StreamReader reader = new StreamReader(adr_clair);
 
-            Parcelle_List = new List<Parcelle>();
 
             for (int x = 0; x < 10; x++)
             {
                 for (int y = 0; y < 10; y++)  /// Mise en tableau
                 {
                     char line = (char)reader.Read();
-                    if (line == '\n') { line = (char)reader.Read(); }
+                    if (line == '\n'|| line == '\r')
+                    { 
+                        line = (char)reader.Read(); line = (char)reader.Read();
+                    }
                     carte[x, y] = line;
                 }
             }
@@ -37,19 +40,6 @@ namespace testclasse
         public void Chiffre()
         {
             int x, y;
-            StreamReader reader = new StreamReader(adr_clair);
-            char[,] Carte = new char[10, 10];
-
-            for (x = 0; x < 10; x++)
-            {
-                for (y = 0; y < 10; y++)  /// Mise en tableau
-                {
-                    char line = (char)reader.Read();
-                    if (line == '\n') { line = (char)reader.Read(); }
-                    Carte[x, y] = line;
-                }
-
-            }
 
             StreamWriter writer = new StreamWriter(adr_chiffre);
             double Valeur;
@@ -120,22 +110,21 @@ namespace testclasse
                         {
                             Parcelle_List.Add(new Parcelle(parcelle_n));
                             doublons.Add(parcelle_n);
+                            nbParcelle += 1;
                         }
                     }
                 }
             }
         }
 
-        public int calculTaille()
+        public int CalculTaille(char Parcelle_n)
         {
-            Console.WriteLine("De quelle parcelle voulez-vous connaitre la taille ? :");
-            char Parcelle_nom = Convert.ToChar(Console.ReadLine());
-            bool b = !doublons.Contains(Parcelle_nom);
+            bool b = !doublons.Contains(Parcelle_n);
             int ParcelleTaille = 0;
 
             foreach (Parcelle val in Parcelle_List)
             {
-                if (val.Nom == Parcelle_nom)
+                if (val.Nom == Parcelle_n)
                 {
                     for (int x = 0; x != '\n'; x++)
                     {
@@ -150,14 +139,12 @@ namespace testclasse
 
                     ParcelleTaille = val.Taille;
 
-                    Console.WriteLine("Taille de la parcelle {0} = {1}", val.Nom, val.Taille);
-                    Console.WriteLine();
                 }
                 else
                     if (b)
                 {
-                    Console.WriteLine("Parcelle {0} - inexistante", Parcelle_nom);
-                    Console.WriteLine("taille de la parcelle {0} = 0", Parcelle_nom);
+                    Console.WriteLine("Parcelle {0} - inexistante", Parcelle_n);
+                    Console.WriteLine("taille de la parcelle {0} = 0", Parcelle_n);
 
                     return 0;
                 }
@@ -186,6 +173,15 @@ namespace testclasse
             }
         }
 
+        public void MoyenneTaille()
+        {
+            double moyenne = 0;
+            foreach (Parcelle val in Parcelle_List)
+            {
+                moyenne += CalculTaille(val.Nom);
+            }
+            Console.WriteLine("Moyenne: {0}",Math.Round(moyenne / nbParcelle, 2));
+        }
 
     }
 }
