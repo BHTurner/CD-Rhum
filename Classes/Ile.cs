@@ -30,10 +30,7 @@ namespace testclasse
                     char line = (char)reader.Read();
                     if (line == '\n') { line = (char)reader.Read(); }
                     carte[x, y] = line;
-
-                    Console.Write(line);
                 }
-                Console.WriteLine();
             }
         }
 
@@ -134,10 +131,11 @@ namespace testclasse
             Console.WriteLine("De quelle parcelle voulez-vous connaitre la taille ? :");
             char Parcelle_nom = Convert.ToChar(Console.ReadLine());
             bool b = !doublons.Contains(Parcelle_nom);
+            int ParcelleTaille = 0;
 
             foreach (Parcelle val in Parcelle_List)
             {
-                if(val.Nom == Parcelle_nom)
+                if (val.Nom == Parcelle_nom)
                 {
                     for (int x = 0; x != '\n'; x++)
                     {
@@ -150,20 +148,22 @@ namespace testclasse
                         }
                     }
 
+                    ParcelleTaille = val.Taille;
+
                     Console.WriteLine("Taille de la parcelle {0} = {1}", val.Nom, val.Taille);
                     Console.WriteLine();
                 }
                 else
-                    if(b)
-                    {
-                        Console.WriteLine("Parcelle {0} - inexistante", Parcelle_nom);
-                        Console.WriteLine("taille de la parcelle {0} = 0", Parcelle_nom);
+                    if (b)
+                {
+                    Console.WriteLine("Parcelle {0} - inexistante", Parcelle_nom);
+                    Console.WriteLine("taille de la parcelle {0} = 0", Parcelle_nom);
 
                     return 0;
-                    }
+                }
             }
 
-            return 0;
+            return ParcelleTaille;
         }
 
         public void Emplacement()
