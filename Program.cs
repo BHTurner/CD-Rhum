@@ -10,7 +10,7 @@ namespace Rhum
             Scabb.createParcelle();
             Scabb.MoyenneTaille();
             Scabb.Emplacement();
-
+            Scabb.Affichage();
         }
     }
 }
