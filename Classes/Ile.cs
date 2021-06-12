@@ -183,5 +183,34 @@ namespace Rhum
             Console.WriteLine("Moyenne: {0}",Math.Round(moyenne / nbParcelle, 2));
         }
 
+        public void Affichage()
+        {
+            for (int x = 0; x < 10; x++)
+            {
+                for (int y = 0; y < 10; y++)  /// Mise en tableau
+                {
+                    char var = Carte[x, y];
+                    if (var == 'M')
+                    {
+                        Console.ForegroundColor = System.ConsoleColor.Blue;
+                        Console.Write("{0} ", var);
+                        Console.ResetColor();
+                    }
+                    else if (var == 'F')
+                    {
+                        Console.ForegroundColor = System.ConsoleColor.Green;
+                        Console.Write("{0} ", var);
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.Write("{0} ", var);
+                        Console.ResetColor();
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
     }
 }
