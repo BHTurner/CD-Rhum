@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace Scabb
-{/// <summary> Ile connues </summary>
+namespace Rhum
+{/// <summary> Iles qui sont connues </summary>
     class Ile
     {
         #region Attributs

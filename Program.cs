@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading;
 
-namespace Scabb
-{
+namespace Rhum
+{/// <summary> Programme Principal </summary>
     class Program
     {
         static void Main(string[] args)
@@ -32,10 +32,10 @@ namespace Scabb
                     case 1:
                         Console.WriteLine("Chiffrage de la carte {0} ...", Scabb.Nom);
                         Scabb.Chiffre();
-                        Thread.Sleep(3000);
+                        Thread.Sleep(100);
                         Console.WriteLine("Déchiffrage de la carte {0} ...", Scabb.Nom);
                         Scabb.Dechiffre();
-                        Thread.Sleep(3000);
+                        Thread.Sleep(100);
                         Console.WriteLine("Terminé.");
                         Choix = 1;
                         break;
