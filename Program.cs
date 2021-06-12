@@ -27,7 +27,7 @@ namespace Scabb
                     return;
                 }
 
-                switch (option)
+                switch (option)  ///Choix de la carte
                 {
                     case 1:
                         Console.WriteLine("Chiffrage de la carte {0} ...", Scabb.Nom);
@@ -75,7 +75,7 @@ namespace Scabb
                     return;
                 }
 
-                switch (option)
+                switch (option)  ///Choix des méthodes proposées
                 {
                     case 1:
                         Console.WriteLine();

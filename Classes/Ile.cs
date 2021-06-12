@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 
 namespace Scabb
-{
+{/// <summary> Ile connues </summary>
     class Ile
     {
         #region Attributs
@@ -75,6 +75,7 @@ namespace Scabb
         /// <summary>
         /// Constructeur permettant de modéliser un objet "ile"
         /// </summary>
+        /// <param name="n">Nom de l'ile</param>
         public Ile(string n)
         {
             nom = n;
