@@ -32,12 +32,21 @@ namespace Rhum
         /// Variable égale au nombre de parcelle d'une carte
         /// </summary>
         private static int nbParcelle = 0;
+        #endregion
 
+        #region tableaux
         /// <summary>
         /// Tableau deux dimensions qui va prendre les valeurs de la carte
         /// </summary>
         char[,] carte = new char[10, 10];
 
+        /// <summary>
+        /// Tableau de la carte déchiffrée
+        /// </summary>
+        char[,] carteDechifr = new char[10, 10];
+        #endregion
+
+        #region Listes
         /// <summary>
         /// Liste contenant la liste des parcelles d'une carte
         /// </summary>
@@ -47,20 +56,19 @@ namespace Rhum
         /// Liste permetttant d'éviter les doublons de la liste 'Parcelle_list'
         /// </summary>
         List<char> doublons = new List<char>();
-
-        /// <summary>
-        /// Tableau de la carte déchiffrée
-        /// </summary>
-        char[,] carteDechifr = new char[10, 10];
         #endregion
 
         #region Accesseurs
+
+        /// <summary>
+        /// Accesseur permettant de transmettre la carte ayant copier les données de la carte .clair
+        /// </summary>
         public char[,] Carte { get => carte; set => carte = value; }
         #endregion
 
         #region Constructeurs
         /// <summary>
-        /// Constructeur permettant de mettre un fichier carte en tableau
+        /// Constructeur permettant de modéliser un objet "ile"
         /// </summary>
         public Ile(string n)
         {
@@ -358,6 +366,9 @@ namespace Rhum
             Console.WriteLine("Moyenne: {0}", Math.Round(moyenne / nbParcelle, 2));
         }
 
+        /// <summary>
+        /// Methode permettant d'afficher les parcelles présentent dans la liste si leur taille est supérieure à une variable choisie par l'utilisateur
+        /// </summary>
         public void TailleSuperieur()
         {
             int nb, x = 0;
@@ -378,6 +389,9 @@ namespace Rhum
             }
         }
 
+        /// <summary>
+        /// Methode permettant d'afficher la carte une fois déchiffrée
+        /// </summary>
         public void Affichage()
         {
             for (int x = 0; x < 10; x++)
@@ -406,6 +420,6 @@ namespace Rhum
                 Console.WriteLine();
             }
         }
+        #endregion
     }
 }
-#endregion

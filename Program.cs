@@ -7,8 +7,6 @@ namespace Rhum
         static void Main(string[] args)
         {
             Ile Rhum = new Ile("Scabb");
-            Rhum.Affichage();
-            Rhum.
         }
     }
 }
