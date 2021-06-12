@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace Rhum
+namespace Scabb
 {
     class Ile
     {
@@ -64,6 +64,11 @@ namespace Rhum
         /// Accesseur permettant de transmettre la carte ayant copier les données de la carte .clair
         /// </summary>
         public char[,] Carte { get => carte; set => carte = value; }
+
+        /// <summary>
+        /// Accesseur du nom de la carte
+        /// </summary>
+        public string Nom { get => nom; }
         #endregion
 
         #region Constructeurs
@@ -78,48 +83,6 @@ namespace Rhum
             adr_dechiffre = String.Format(@"..\..\..\Cartes\{0}2.clair", nom);
             StreamReader readerClair = new StreamReader(adr_clair);
 
-            Console.WriteLine("Voulez-vous partir d'une carte .clair ou .chiffre ?");
-            string reponse = Convert.ToString(Console.ReadLine());
-
-            if(reponse == ".clair" || reponse == ".Clair" || reponse == "clair" || reponse == "Clair")
-            {
-                for (int x = 0; x < 10; x++)
-                {
-                    for (int y = 0; y < 10; y++)  /// Mise en tableau
-                    {
-                        char line = (char)readerClair.Read();
-                        if (line == '\n' || line == '\r')
-                        {
-                            line = (char)readerClair.Read();
-                        }
-                        carte[x, y] = line;
-                    }
-                }
-
-                for (int x = 0; x < 10; x++)
-                {
-                    for (int y = 0; y < 10; y++)
-                    {
-                        char parcelle_n = carte[x, y];
-                        bool b = doublons.Contains(parcelle_n);
-
-                        if ((parcelle_n != 'M') && (parcelle_n != 'F'))
-                        {
-                            if (b == false)
-                            {
-                                Parcelle_List.Add(new Parcelle(parcelle_n));
-                                doublons.Add(parcelle_n);
-                                nbParcelle += 1;
-                            }
-                        }
-                    }
-                }
-            }
-            else
-                if(reponse == ".chiffre" || reponse == ".Chiffre" || reponse == "chiffre" || reponse == "Chiffre")
-                {
-                    dechiffre();
-                }
         }
         #endregion
 
@@ -127,7 +90,7 @@ namespace Rhum
         /// <summary>
         /// Methode permettant de déchiffrer une carte .chiffre
         /// </summary>
-        public void dechiffre()
+        public void Dechiffre()
         {
             using (StreamReader reader = new StreamReader(adr_chiffre))
             {
@@ -137,7 +100,7 @@ namespace Rhum
                 string[] tab2 = new string[10];
                 int[,] tab3 = new int[10, 10];
                 int[,] tab4 = new int[10, 10];
-                bool mer = false, foret = false, frtO = false, frtE = false, frtN = false, frtS = false;
+                bool mer = false, foret = false, frtO = false, frtN = false;
 
                 fichier = reader.ReadLine();
                 tab1 = fichier.Split("|");
@@ -176,12 +139,10 @@ namespace Rhum
                             if (tab3[x, y] >= 8)                  //Si pas de frontière à l'est
                             {
                                 tab3[x, y] = tab3[x, y] - 8;
-                                frtE = true;
                             }
                             if (tab3[x, y] >= 4)                  //Si pas de frontière au sud
                             {
                                 tab3[x, y] = tab3[x, y] - 4;
-                                frtS = true;
                             }
                             if (tab3[x, y] >= 2)                  //Si pas de frontière à l'ouest
                             {
@@ -216,13 +177,11 @@ namespace Rhum
                             mer = false;
                             foret = false;
                             frtO = false;
-                            frtE = false;
                             frtN = false;
-                            frtS = false;
                         }
                     }
 
-                    for (x = 0; x < 10; x++)          //Affichage du tableau final
+                    for (x = 0; x < 10; x++)         
                     {
                         for (y = 0; y < 10; y++)
                         {
@@ -233,6 +192,25 @@ namespace Rhum
                     }
                 }
             }
+
+            for (int x = 0; x < 10; x++)
+            {
+                for (int y = 0; y < 10; y++)
+                {
+                    char parcelle_n = carteDechifr[x, y];
+                    bool b = doublons.Contains(parcelle_n);
+
+                    if ((parcelle_n != 'M') && (parcelle_n != 'F'))
+                    {
+                        if (b == false)
+                        {
+                            Parcelle_List.Add(new Parcelle(parcelle_n));
+                            doublons.Add(parcelle_n);
+                            nbParcelle += 1;
+                        }
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -240,7 +218,21 @@ namespace Rhum
         /// </summary>
         public void Chiffre()
         {
+            StreamReader readerClair = new StreamReader(adr_clair);
             int x, y;
+
+            for (x = 0; x < 10; x++)
+            {
+                for (y = 0; y < 10; y++)  /// Mise en tableau
+                {
+                    char line = (char)readerClair.Read();
+                    if (line == '\n' || line == '\r')
+                    {
+                        line = (char)readerClair.Read();
+                    }
+                    carte[x, y] = line;
+                }
+            }
 
             StreamWriter writer = new StreamWriter(adr_chiffre);
             double Valeur;
@@ -301,13 +293,14 @@ namespace Rhum
 
             foreach (Parcelle P in Parcelle_List)
             {
+                P.Taille = 0;
                 if (P.Nom == Parcelle_n)
                 {
                     for (int x = 0; x != '\n'; x++)
                     {
                         for (int y = 0; y != '\n'; y++)
                         {
-                            if (carte[x, y] == P.Nom)
+                            if (carteDechifr[x, y] == P.Nom)
                             {
                                 P.Taille += 1;
                             }
@@ -337,18 +330,19 @@ namespace Rhum
         {
             foreach (Parcelle P in Parcelle_List)
             {
-                Console.WriteLine("PARCELLE {0} - {1} unités", P.Nom, P.Taille);
+                Console.WriteLine("PARCELLE {0} - {1} unités", P.Nom, CalculTaille(P.Nom));
 
                 for (int x = 0; x != '\n'; x++)
                 {
                     for (int y = 0; y != '\n'; y++)
                     {
-                        if (carte[x, y] == P.Nom)
+                        if (carteDechifr[x, y] == P.Nom)
                         {
                             Console.Write("({0},{1}) ", x, y);
                         }
                     }
                 }
+                Console.WriteLine();
                 Console.WriteLine();
             }
         }
@@ -373,13 +367,13 @@ namespace Rhum
         {
             int nb, x = 0;
             Console.Write("Parcelle(s) de taille supérieur à : ");
-            Console.WriteLine();
             nb = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             foreach (Parcelle P in Parcelle_List)
             {
-                if (P.Taille >= nb)
+                if (CalculTaille(P.Nom) >= nb)
                 {
-                    Console.WriteLine("Parcelle {0} : {1} unités", P.Nom, P.Taille);
+                    Console.WriteLine("Parcelle {0} : {1} unités", P.Nom, CalculTaille(P.Nom));
                     x++;
                 }
             }
