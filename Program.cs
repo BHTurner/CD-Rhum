@@ -6,11 +6,9 @@ namespace Rhum
     {
         static void Main(string[] args)
         {
-            Ile Scabb = new Ile("Scabb");
-            Scabb.createParcelle();
-            Scabb.MoyenneTaille();
-            Scabb.Emplacement();
-            Scabb.Affichage();
+            Ile Rhum = new Ile("Scabb");
+            Rhum.Affichage();
+            Rhum.
         }
     }
 }

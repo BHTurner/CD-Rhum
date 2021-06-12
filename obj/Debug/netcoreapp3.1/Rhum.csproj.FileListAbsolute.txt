@@ -11,3 +11,16 @@ C:\Users\Toine\Documents\GitHub\CD-Rhum\obj\Debug\netcoreapp3.1\Rhum.csproj.Core
 C:\Users\Toine\Documents\GitHub\CD-Rhum\obj\Debug\netcoreapp3.1\Rhum.dll
 C:\Users\Toine\Documents\GitHub\CD-Rhum\obj\Debug\netcoreapp3.1\Rhum.pdb
 C:\Users\Toine\Documents\GitHub\CD-Rhum\obj\Debug\netcoreapp3.1\Rhum.genruntimeconfig.cache
+C:\Users\omega\Desktop\CD-Rhum-master\obj\Debug\netcoreapp3.1\Rhum.AssemblyInfoInputs.cache
+C:\Users\omega\Desktop\CD-Rhum-master\obj\Debug\netcoreapp3.1\Rhum.AssemblyInfo.cs
+C:\Users\omega\Desktop\CD-Rhum-master\obj\Debug\netcoreapp3.1\Rhum.csproj.CoreCompileInputs.cache
+C:\Users\omega\Desktop\CD-Rhum-master\obj\Debug\netcoreapp3.1\Rhum.dll
+C:\Users\omega\Desktop\CD-Rhum-master\obj\Debug\netcoreapp3.1\Rhum.pdb
+C:\Users\omega\Desktop\CD-Rhum-master\bin\Debug\netcoreapp3.1\Rhum.exe
+C:\Users\omega\Desktop\CD-Rhum-master\bin\Debug\netcoreapp3.1\Rhum.deps.json
+C:\Users\omega\Desktop\CD-Rhum-master\bin\Debug\netcoreapp3.1\Rhum.runtimeconfig.json
+C:\Users\omega\Desktop\CD-Rhum-master\bin\Debug\netcoreapp3.1\Rhum.runtimeconfig.dev.json
+C:\Users\omega\Desktop\CD-Rhum-master\bin\Debug\netcoreapp3.1\Rhum.dll
+C:\Users\omega\Desktop\CD-Rhum-master\bin\Debug\netcoreapp3.1\Rhum.pdb
+C:\Users\omega\Desktop\CD-Rhum-master\obj\Debug\netcoreapp3.1\Rhum.genruntimeconfig.cache
+C:\Users\omega\Desktop\CD-Rhum-master\obj\Debug\netcoreapp3.1\Rhum.csproj.AssemblyReference.cache

@@ -8,19 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Maxence Walt\\.nuget\\packages\\": {}
+    "C:\\Users\\omega\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maxence Walt\\iCloudDrive\\Desktop\\CD-Rhum\\Rhum.csproj",
+      "projectUniqueName": "C:\\Users\\omega\\Desktop\\CD-Rhum-master\\Rhum.csproj",
       "projectName": "Rhum",
-      "projectPath": "C:\\Users\\Maxence Walt\\iCloudDrive\\Desktop\\CD-Rhum\\Rhum.csproj",
-      "packagesPath": "C:\\Users\\Maxence Walt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maxence Walt\\iCloudDrive\\Desktop\\CD-Rhum\\obj\\",
+      "projectPath": "C:\\Users\\omega\\Desktop\\CD-Rhum-master\\Rhum.csproj",
+      "packagesPath": "C:\\Users\\omega\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\omega\\Desktop\\CD-Rhum-master\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Maxence Walt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\omega\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
